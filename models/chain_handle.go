@@ -56,6 +56,22 @@ func (t *ChainHandle) QueryTx(txId []byte) (*xpb.TxInfo, error) {
 	return reader.NewLedgerReader(t.chain.Context(), t.genXctx()).QueryTx(txId)
 }
 
+func (t *ChainHandle) Test (address string)(*protos.CandidateRatio,error){
+	return reader.NewLedgerReader(t.chain.Context(), t.genXctx()).Test(address)
+}
+
+func (t *ChainHandle)PledgeVotingRecords(address string)(*protos.PledgeVotingResponse,error){
+	return reader.NewLedgerReader(t.chain.Context(), t.genXctx()).PledgeVotingRecords(address)
+}
+
+func (t *ChainHandle)GetVerification(address string)(*protos.VerificationTable,error){
+	return reader.NewLedgerReader(t.chain.Context(), t.genXctx()).GetVerification(address)
+}
+
+func (t *ChainHandle)GetSystemStatusExplorer()(*protos.BCStatusExplorer,error){
+	return reader.NewLedgerReader(t.chain.Context(), t.genXctx()).GetSystemStatusExplorer()
+}
+
 func (t *ChainHandle) SelectUtxo(account string, need *big.Int, isLock, isExclude bool,
 	pubKey string, sign []byte) (*lpb.UtxoOutput, error) {
 	// 如果需要临时锁定utxo，需要校验权限
