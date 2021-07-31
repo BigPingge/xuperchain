@@ -7,11 +7,11 @@ import (
 	"github.com/xuperchain/xuperchain/models"
 	acom "github.com/xuperchain/xuperchain/service/common"
 	"github.com/xuperchain/xuperchain/service/pb"
-	sctx "github.com/xuperchain/xupercore/example/xchain/common/context"
-	ecom "github.com/xuperchain/xupercore/kernel/engines/xuperos/common"
-	"github.com/xuperchain/xupercore/kernel/network/p2p"
-	"github.com/xuperchain/xupercore/lib/utils"
-	"github.com/xuperchain/xupercore/protos"
+	sctx "github.com/superconsensus-chain/xupercore/example/xchain/common/context"
+	ecom "github.com/superconsensus-chain/xupercore/kernel/engines/xuperos/common"
+	"github.com/superconsensus-chain/xupercore/kernel/network/p2p"
+	"github.com/superconsensus-chain/xupercore/lib/utils"
+	"github.com/superconsensus-chain/xupercore/protos"
 )
 
 // 注意：

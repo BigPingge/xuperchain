@@ -6,8 +6,8 @@ import (
 	"github.com/golang/protobuf/proto"
 
 	"github.com/xuperchain/xuperchain/service/pb"
-	"github.com/xuperchain/xupercore/bcs/ledger/xledger/xldgpb"
-	"github.com/xuperchain/xupercore/protos"
+	"github.com/superconsensus-chain/xupercore/bcs/ledger/xledger/xldgpb"
+	"github.com/superconsensus-chain/xupercore/protos"
 )
 
 // 为了完全兼容老版本pb结构，转换交易结构
