@@ -50,7 +50,7 @@ func (e *eventService) Subscribe(req *pb.SubscribeRequest, stream pb.EventServic
 		return err
 	}
 	for iter.Next() {
-		payload := iter.Data()
+		payload := iter.Data2()
 		buf, _ := encfunc(payload)
 		event := &pb.Event{
 			Payload: buf,
